@@ -1,7 +1,22 @@
 const request = require('request');
 const cheerio = require('cheerio');
 // 要爬取的网站 URL
-const url = 'http://example.com/';
+// 引入readline模块
+const readline = require("readline");
+
+// 创建readline接口实例
+let r1 = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
+
+//调用接口方法
+r1.question("请输入网址URL：\t", function (answer) {
+    console.log("网址：", answer);
+    // 不加close，则不会结束
+    r1.close();
+})
+const url = answer;
 // 发起请求
 request(url, function(error, response, html) {
   if (!error && response.statusCode == 200) {
