@@ -25,8 +25,8 @@ app.get('/api/url', (req, res)=>{
       // console.log(unescape(decodeURI));
       JSONcode = JSON.parse(decodeURIComponent(unescape(decodeURI)));
       console.log(JSONcode.currentData.paste.user);
-      console.log(keycode);
-      console.log(JSONcode.currentData.paste.data);
+      // console.log(keycode);
+      // console.log(JSONcode.currentData.paste.data);
       if (keycode == JSONcode.currentData.paste.data) res.send(JSONcode.currentData.paste.user);
       else res.send({'isOK' : false});
       
