@@ -1,7 +1,10 @@
 const https = require('https');
+const fs = require("fs")
 url = 'https://www.luogu.com.cn/paste/s7ia0ta9'
 var JSONcode;
 decodeURI = ''
+
+
 https.get(url, (res) => {
   let data = '';
   
@@ -13,7 +16,8 @@ https.get(url, (res) => {
     decodeURI = data.substring(data.search('decodeURIComponent') + 20, data.search('feConfigVersion') - 12)
     // console.log(unescape(decodeURI));
     JSONcode = JSON.parse(decodeURIComponent(unescape(decodeURI)));
-    console.log(JSONcode.code);
+    console.log(JSONcode.currentData.paste.user);
+    
   });
 }).on('error', (err) => {
   console.log('Error: ', err.message);
