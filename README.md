@@ -18,3 +18,7 @@
 ## 测试
 
 可以向 `http://ztrztr.top:8084/api/url` 发送测试。
+
+## 原理
+
+<https://ztrztr.top/archives/259>
