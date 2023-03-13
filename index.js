@@ -8,6 +8,7 @@ const app= express();
 
 app.get('/api/url', (req, res)=>{
   url = 'https://www.luogu.com.cn/paste/' + req.query.url;
+  keycode = req.query.keycode;
   // JSONtt = ''
   console.log(url);
   https.get(url, (ress) => {
@@ -24,7 +25,10 @@ app.get('/api/url', (req, res)=>{
       // console.log(unescape(decodeURI));
       JSONcode = JSON.parse(decodeURIComponent(unescape(decodeURI)));
       console.log(JSONcode.currentData.paste.user);
-      res.send(JSONcode.currentData.paste.user);
+      console.log(keycode);
+      console.log(JSONcode.currentData.paste.data);
+      if (keycode == JSONcode.currentData.paste.data) res.send(JSONcode.currentData.paste.user);
+      else res.send({'isOK' : false});
       
     });
   }).on('error', (err) => {
