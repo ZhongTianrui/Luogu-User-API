@@ -6,7 +6,7 @@ var JSONcode;
 decodeURI = ''
 const app= express();
 
-app.get('/api/url', (req, res)=>{
+app.get('/api/luogu', (req, res)=>{
   url = 'https://www.luogu.com.cn/paste/' + req.query.url;
   keycode = req.query.keycode;
   // JSONtt = ''
