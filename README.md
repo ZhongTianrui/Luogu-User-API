@@ -17,7 +17,7 @@
 
 ## 测试
 
-可以向 `http://ztrztr.top:8084/api/url` 发送测试。
+<https://www.apifox.cn/apidoc/shared-cd94878a-d290-4921-b210-3460e589acee>
 
 ## 原理
 
