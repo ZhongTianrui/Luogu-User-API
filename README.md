@@ -21,4 +21,4 @@
 
 ## 测试
 
-可以向 `http://api.ztrztr.top/api/luogu` 发送测试。
+可以向 [`http://152.136.110.16:8084/api/luogu` 发送测试。
